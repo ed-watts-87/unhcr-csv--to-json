@@ -1,0 +1,17 @@
+{
+  "name": "apps",
+  "version": "0.1.0",
+  "description": "A simple csv to json converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ed Watts",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^0.5.3",
+    "fs": "0.0.2",
+    "iconv-lite": "^0.4.13",
+    "json-pretty": "0.0.1"
+  }
+}
