@@ -1,7 +1,7 @@
 {
-  "name": "apps",
-  "version": "0.1.0",
-  "description": "A simple csv to json converter",
+  "name": "unhcr-csv-to-json",
+  "version": "1.0.0",
+  "description": "A simple csv to json converter for UNHCR CSV data",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
