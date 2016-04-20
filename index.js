@@ -9,14 +9,15 @@ var converter = new Converter({
 //set decodestream encoding(decoding)
 var converterStream = iconv.decodeStream('utf16');
 //set JSON scheme
+//META:Deck Name|Deck Author|unique-deck-id|12000
 var jsonOutput = {
   "license-url": "http://creativecommons.org/licenses/by/4.0/",
   "readme": "Default content to be built into distributable apk. Translations by: http://translatorswithoutborders.org and http://mercycorps.org",
   "locked": false,
-  "timestamp": new Date().getTime(),
-  "deck_label": "Humanitarian Responder - Transit Centre",
+  "timestamp": "",
+  "deck_label": "",
   "publisher": "UNHCR Innovation",
-  "id": "org.innovation.unhcr.txc-default-deck",
+  "id": "",
   "source_language": "en",
   "languages": [{
     "iso_code": "ar",
@@ -41,8 +42,12 @@ var filename = process.argv[2];
 var file = fs.createReadStream(filename).pipe(converterStream).pipe(converter);
 //handle each record appropriately
 converter.on("record_parsed", function(jsonObj) {
-  if (jsonObj.field1 === "META:Background");
-  else {
+  if (jsonObj.field1 === "META:Background"){
+    jsonOutput.deck_label = jsonObj.field1.replace(/META:/, '');
+    jsonOutput.id =  jsonObj.field3;
+    jsonOutput.timestamp = jsonObj.field4;
+    jsonOutput.publisher = jsonObj.field2;
+  } else {
     var card = {
       "dest_txt": jsonObj.field4,
       "card_label": jsonObj.field1,
