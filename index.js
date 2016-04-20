@@ -28,6 +28,11 @@ var jsonOutput = {
     "cards": [
 
     ]
+  }, {
+    "iso_code": "ps",
+    "cards": [
+
+    ]
   }]
 };
 //get file name from cli args
@@ -47,6 +52,8 @@ converter.on("record_parsed", function(jsonObj) {
       jsonOutput.languages[0].cards.push(card);
     } else if (jsonObj.field3 === "Farsi") {
       jsonOutput.languages[1].cards.push(card);
+    } else if (jsonObj.field3 === "Pashto") {
+      jsonOutput.languages[2].cards.push(card);
     }
   }
 });
