@@ -11,7 +11,12 @@ NodeJS (Built and tested with v0.12.2)
 
 ## How to use
 The following is a step by step list of instructions to follow:
-
+### Either
+Run
+```
+npm install unhcr-csv-to-json
+```
+### Or..
 * Install [NodeJS](https://nodejs.org/) installed
 * Fork/Clone this project
 * Run
