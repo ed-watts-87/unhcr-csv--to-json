@@ -14,14 +14,14 @@ The following is a step by step list of instructions to follow:
 ### Either
 Run
 ```
-npm install unhcr-csv-to-json
+$ npm install unhcr-csv-to-json
 ```
 ### Or..
-* Install [NodeJS](https://nodejs.org/) installed
+* Ensure [NodeJS](https://nodejs.org/) is installed
 * Fork/Clone this project
 * Run
 ```
-npm install
+$ npm install
 ```
 
 This will use NPM to download the required node modules (as described above). If there are any errors, then try and debug.
